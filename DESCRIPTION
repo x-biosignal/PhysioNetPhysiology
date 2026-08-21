@@ -1,0 +1,47 @@
+Package: PhysioNetPhysiology
+Type: Package
+Title: Network Physiology and Time-Delay-Stability Organ-Interaction Networks
+Version: 0.3.0
+Authors@R:
+    person(given = "Yusuke",
+           family = "Matsui",
+           role = c("aut", "cre"),
+           email = "mail.to.matsui@gmail.com")
+Description: Tools for Network Physiology: the study of dynamic interactions
+    among diverse physiological systems (brain, heart, respiration, muscle).
+    Implements Time Delay Stability (TDS) analysis to identify stable dynamic
+    couplings between signals, builds organ-interaction networks whose links are
+    significance-tested against phase-randomised surrogates, and quantifies how
+    those networks reconfigure across physiological states (e.g. sleep stages).
+    Designed to operate on the multimodal PhysioExperiment data model, but the
+    core engine works on plain multivariate time series. Methods follow
+    Bashan et al. (2012) <doi:10.1038/ncomms1705> and
+    Bartsch et al. (2015) <doi:10.1371/journal.pone.0142143>.
+License: MIT + file LICENSE
+URL: https://github.com/x-biosignal/PhysioNetPhysiology, https://x-biosignal.r-universe.dev/PhysioNetPhysiology, https://x-biosignal.github.io/PhysioNetPhysiology
+BugReports: https://github.com/x-biosignal/PhysioNetPhysiology/issues
+Encoding: UTF-8
+VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Depends: R (>= 4.2)
+Imports:
+    stats,
+    graphics,
+    grDevices,
+    utils,
+    methods,
+    Rcpp
+LinkingTo:
+    Rcpp
+Suggests:
+    PhysioCore,
+    PhysioCrossModal,
+    SummarizedExperiment,
+    S4Vectors,
+    igraph,
+    ggplot2,
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
